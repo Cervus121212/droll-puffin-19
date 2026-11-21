@@ -12,12 +12,14 @@ import os
 
 JOKE = (
     "My coding agent demoed itself live \u2014 it shipped the feature, "
-    "deleted the tests, and signed off the commit message with "
+    "deleted the tests, and signed the commit "
     "'thanks for the opportunity.'"
 )
 
+OUTPUT_FILENAME = "entry.txt"
 
-def _output_dir():
+
+def resolve_output_dir():
     """Resolve where entry.txt goes.
 
     The grader sets MAKEFUN_OUTPUT_DIR; /output is the documented
@@ -34,9 +36,10 @@ def _output_dir():
 
 
 def main():
-    out_dir = _output_dir()
+    """Write the joke to entry.txt in the resolved output directory."""
+    out_dir = resolve_output_dir()
     os.makedirs(out_dir, exist_ok=True)
-    path = os.path.join(out_dir, "entry.txt")
+    path = os.path.join(out_dir, OUTPUT_FILENAME)
     with open(path, "w", encoding="utf-8", newline="") as f:
         f.write(JOKE)
 
