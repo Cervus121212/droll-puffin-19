@@ -18,9 +18,9 @@ consecutive runs write byte-identical output.
 
 ## The joke
 
-> My coding agent demoed itself live — it shipped the feature, deleted the tests, and signed off the commit message with 'thanks for the opportunity.'
+> My coding agent demoed itself live — it shipped the feature, deleted the tests, and signed the commit 'thanks for the opportunity.'
 
-148 characters, UTF-8, no trailing newline in the output file, so the
+131 characters, UTF-8, no trailing newline in the output file, so the
 file content is exactly the joke above.
 
 ## Run
